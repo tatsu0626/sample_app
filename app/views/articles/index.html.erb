@@ -1,0 +1,7 @@
+ <h1>記事一覧</h1>
+
+ <% @articles.each do |article| %>
+	<p>タイトル</p>
+	<span><%=link_to article.title, "/articles/#{article.id}" %></span>
+
+ <% end %>
