@@ -9,7 +9,11 @@ Rails.application.routes.draw do
 
   get '/articles' => 'articles#index'
 
-  get 'posts/new'
+  get '/articles/:id/edit' => 'articles#edit', as: 'edit_article'
+
+  patch '/articles/:id' => 'articles#update', as: 'update_article'
+
+ get 'posts/new'
 
   post '/posts' => 'posts#create'
 
